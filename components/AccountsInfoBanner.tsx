@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Reveal, RevealGroup } from "./Reveal";
 
 interface AccountLine {
   label: string; // e.g., "BCP"
@@ -39,33 +40,41 @@ export default function AccountsInfoBanner({
 
           {/* Floral sides */}
           {floralLeftSrc && (
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 opacity-90">
-              <div className="relative w-20 h-40 md:w-24 md:h-48">
-                <Image src={floralLeftSrc} alt="Floral left" fill className="object-contain" />
+            <Reveal variant="fade-up">
+              <div className="absolute left-3 top-1/2 -translate-y-1/2 opacity-90">
+                <div className="relative w-20 h-40 md:w-24 md:h-48">
+                  <Image src={floralLeftSrc} alt="Floral left" fill className="object-contain" />
+                </div>
               </div>
-            </div>
+            </Reveal>
           )}
           {floralRightSrc && (
-            <div className="absolute right-3 top-1/2 -translate-y-1/2 opacity-90">
-              <div className="relative w-20 h-40 md:w-24 md:h-48">
-                <Image src={floralRightSrc} alt="Floral right" fill className="object-contain" />
+            <Reveal variant="fade-up" delay={80}>
+              <div className="absolute right-3 top-1/2 -translate-y-1/2 opacity-90">
+                <div className="relative w-20 h-40 md:w-24 md:h-48">
+                  <Image src={floralRightSrc} alt="Floral right" fill className="object-contain" />
+                </div>
               </div>
-            </div>
+            </Reveal>
           )}
 
           {/* Content */}
           <div className="absolute inset-0 grid place-items-center px-6 py-8">
             <div className="text-center text-amber-900">
-              <h3 className="font-ballet text-3xl md:text-4xl tracking-wide mb-2">{title}</h3>
-              <div className="space-y-1 md:space-y-2 font-serif">
-                {lines.map((line, idx) => (
-                  <p key={idx} className="text-base md:text-xl tracking-wide">
-                    <span className="font-semibold">{line.label}</span>
-                    <span className="mx-2">: </span>
-                    <span className="underline decoration-amber-900/30 underline-offset-4">{line.value}</span>
-                  </p>
-                ))}
-              </div>
+              <Reveal variant="fade-down">
+                <h3 className="font-ballet text-3xl md:text-4xl tracking-wide mb-2">{title}</h3>
+              </Reveal>
+              <RevealGroup stagger={90}>
+                <div className="space-y-1 md:space-y-2 font-serif">
+                  {lines.map((line, idx) => (
+                    <p key={idx} className="text-base md:text-xl tracking-wide">
+                      <span className="font-semibold">{line.label}</span>
+                      <span className="mx-2">: </span>
+                      <span className="underline decoration-amber-900/30 underline-offset-4">{line.value}</span>
+                    </p>
+                  ))}
+                </div>
+              </RevealGroup>
             </div>
           </div>
         </div>

@@ -13,52 +13,66 @@ import DressCodeGiftSection from "../components/DressCodeGiftSection";
 import AccountsInfoBanner from "../components/AccountsInfoBanner";
 import GiftAndPlaylistCard from "../components/GiftAndPlaylistCard";
 import ConfirmAttendanceCard from "../components/ConfirmAttendanceCard";
+import { Reveal } from "../components/Reveal";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-rose-50 via-amber-50 to-white">
       <main className="max-w-5xl mx-auto py-12 px-4 space-y-10">
-        <InvitationCard
+        <Reveal>
+          <InvitationCard
           title="¡Nos casamos!"
           couple={{ groom: "Primo", bride: "Prima" }}
           subtitle="y"
           topImageSrc="/floral-top-1.png"
           bottomImageSrc="/floral-bottom-1.png"
         />
+        </Reveal>
 
         {/* Wedding-styled music player below the invitation */}
-        <MusicPlayer src="/music/wedding.mp3" title="Nuestra canción" />
+        <Reveal delay={80}>
+          <MusicPlayer src="/music/wedding.mp3" title="Nuestra canción" />
+        </Reveal>
 
         {/* Floral backdrop with shadowed message card */}
-        <FloralBackdropCard
+        <Reveal delay={120}>
+          <FloralBackdropCard
           backgroundSrc="/bg-roses-2.png"
           title="Un mensaje para nuestros invitados"
           message="Nos llena de alegría compartir este momento con ustedes. ¡Gracias por ser parte de nuestra historia!"
         />
+        </Reveal>
 
         {/* Countdown section */}
-        <WeddingCountdown
+        <Reveal delay={160}>
+          <WeddingCountdown
           targetDate="2026-06-20T16:00:00-05:00"
           backgroundSrc="/bg-roses-2.png"
           title="Cuenta regresiva para nuestra boda"
         />
+        </Reveal>
 
         {/* Big date banner */}
-        <WeddingDateBanner
+        <Reveal delay={200}>
+          <WeddingDateBanner
           date="2026-06-20T16:00:00-05:00"
           backgroundSrc="/bg-date.png"
           subtitle="Reserva la fecha"
         />
+        </Reveal>
 
         {/* Couple Photo */}
-        <CouplePhoto
+        <Reveal delay={240}>
+          <CouplePhoto
           src="/picture-1.png"
           alt="Pareja"
           caption="Con amor, Edson & Lisseth"
         />
+        </Reveal>
 
         {/* Roses Info Card (parents, padrinos, etc.) */}
-        <RosesInfoCard
+        <Reveal delay={280}>
+          <RosesInfoCard
           backgroundSrc="/bg-roses-5.png"
           topIconSrc="/bg-ring-1.png"
           cornerTopLeftSrc="/bg-roses-3.png"
@@ -71,10 +85,12 @@ export default function Home() {
             { heading: "TESTIGOS DE RELIGIOSO", items: ["Roxana Altamirano Bellido", "Jose Antonio Pinto Sanchez"] },
           ]}
         />
+        </Reveal>
 
 
         {/* Itinerary */}
-        <ItineraryCard
+        <Reveal>
+          <ItineraryCard
           backgroundSrc="/bg-roses-2.png"
           title="Itinerario"
           leftItems={[
@@ -88,11 +104,13 @@ export default function Home() {
             { time: "10:00 pm", label: "Inicio de fiesta", iconSrc: "/icon/MUSIC.png" },
           ]}
         />
+        </Reveal>
 
 
         {/* Church location card */
         }
-        <ChurchLocationCard
+        <Reveal>
+          <ChurchLocationCard
           title="Ceremonia Religiosa"
           backgroundSrc="/bg-roses-2.png"
           time="5:00 pm"
@@ -100,9 +118,11 @@ export default function Home() {
           mapUrl="https://www.google.com/maps?q=Iglesia+San+Pedro"
           iconSrc="/icon/CHURCH.png"
         />
+        </Reveal>
 
         {/* Reception location card */}
-        <ReceptionLocationCard
+        <Reveal>
+          <ReceptionLocationCard
           title="Recepción"
           backgroundSrc="/bg-roses-2.png"
           time="6:40 pm"
@@ -110,6 +130,7 @@ export default function Home() {
           mapUrl="https://www.google.com/maps?q=Salon+Principal+Recepcion"
           iconSrc="/icon/CAKE.png"
         />
+        </Reveal>
 
         {/* Another couple photo with a beautiful frame */}
         <CouplePhotoFramed
@@ -120,7 +141,8 @@ export default function Home() {
 
 
         {/* Dress code + gift suggestion section */}
-        <DressCodeGiftSection
+        <Reveal>
+          <DressCodeGiftSection
           backgroundSrc="/bg-roses-2.png"
           circleTitle="Código de Vestimenta"
           circleSubtitle="ELEGANTE"
@@ -130,9 +152,11 @@ export default function Home() {
           giftIconSrc="/icon/COUPLE-1.png"
           giftMessage="¡Que nos acompañen es lo más importante! Y si está en tu disposición realizar una muestra de cariño estaremos muy agradecidos."
         />
+        </Reveal>
 
         {/* Accounts information banner */}
-        <AccountsInfoBanner
+        <Reveal>
+          <AccountsInfoBanner
           title="IRINA"
           backgroundSrc="/bg-papiro.png"
           floralLeftSrc="/flower-1.png"
@@ -144,9 +168,11 @@ export default function Home() {
             { label: "DIRECCIÓN", value: "XXXXXXXXXXXXXXXXXXXX" },
           ]}
         />
+        </Reveal>
 
         {/* Gift suggestion + Playlist card */}
-        <GiftAndPlaylistCard
+        <Reveal>
+          <GiftAndPlaylistCard
           backgroundSrc="/bg-roses-2.png"
           titleGift="Sugerencia de regalo"
           giftIconSrc="/icon/GIFT_2.png"
@@ -158,9 +184,11 @@ export default function Home() {
           playlistCtaText="ELEGIR CANCIÓN"
           playlistCtaUrl="#playlist"
         />
+        </Reveal>
 
         {/* Confirm attendance card */}
-        <ConfirmAttendanceCard
+        <Reveal>
+          <ConfirmAttendanceCard
           backgroundSrc="/bg-roses-2.png"
           title="Confirma tu asistencia"
           message="Tu presencia hará que este día sea aún más especial para nosotros. Por favor, confirma tu asistencia y acompáñanos en este momento tan importante."
@@ -169,6 +197,7 @@ export default function Home() {
           buttonHref="#confirmar"
           illustrationSrc="/icon/BICICLE.png"
         />
+        </Reveal>
       </main>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { RevealGroup } from "./Reveal";
 
 export interface ItineraryItem {
   time: string;
@@ -44,9 +45,11 @@ export default function ItineraryCard({
 
             {/* Left column */}
             <div className="space-y-8 md:space-y-10">
-              {leftItems.map((item, idx) => (
-                <ItineraryEntry key={`L-${idx}`} side="left" index={idx} item={item} />
-              ))}
+              <RevealGroup stagger={140}>
+                {leftItems.map((item, idx) => (
+                  <ItineraryEntry key={`L-${idx}`} side="left" index={idx} item={item} />
+                ))}
+              </RevealGroup>
             </div>
 
             {/* Markers column */}
@@ -57,10 +60,12 @@ export default function ItineraryCard({
             </div>
 
             {/* Right column (staggered lower) */}
-            <div className="space-y-8 md:space-y-10 mt-15 md:mt-20">
-              {rightItems.map((item, idx) => (
-                <ItineraryEntry key={`R-${idx}`} side="right" index={idx} item={item} />
-              ))}
+            <div className="space-y-8 md:space-y-10 mt-4 md:mt-5">
+              <RevealGroup stagger={140} baseDelay={80}>
+                {rightItems.map((item, idx) => (
+                  <ItineraryEntry key={`R-${idx}`} side="right" index={idx} item={item} />
+                ))}
+              </RevealGroup>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Reveal, RevealGroup } from "./Reveal";
 
 interface DressCodeGiftSectionProps {
   backgroundSrc?: string; // optional floral/texture background
@@ -40,21 +41,25 @@ export default function DressCodeGiftSection({
           {/* Top circular badge */}
           <div className="relative">
             <div className="rounded-full bg-[#6b8593] text-white w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] md:w-[340px] md:h-[340px] shadow-xl flex flex-col items-center justify-center gap-3">
-              <h3 className="font-ballet text-2xl sm:text-3xl md:text-4xl text-center px-6 leading-tight">{circleTitle}</h3>
-              {circleIconSrc && (
-                <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20">
-                  <Image src={circleIconSrc} alt="Icon" fill className="object-contain invert" />
-                </div>
-              )}
-              <div className="uppercase tracking-wide text-sm sm:text-base md:text-lg">{circleSubtitle}</div>
+              <RevealGroup stagger={120}>
+                <h3 className="font-ballet text-2xl sm:text-3xl md:text-4xl text-center px-6 leading-tight">{circleTitle}</h3>
+                {circleIconSrc && (
+                  <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20">
+                    <Image src={circleIconSrc} alt="Icon" fill className="object-contain invert" />
+                  </div>
+                )}
+                <div className="uppercase tracking-wide text-sm sm:text-base md:text-lg">{circleSubtitle}</div>
+              </RevealGroup>
             </div>
             {/* Wax seal overlapping */}
             {sealSrc && (
-              <div className="absolute left-1/2 -translate-x-1/2 -bottom-6 sm:-bottom-7 md:-bottom-8 drop-shadow-xl">
-                <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16">
-                  <Image src={sealSrc} alt="Sello" fill className="object-contain" />
+              <Reveal variant="fade-up" delay={200}>
+                <div className="absolute left-1/2 -translate-x-1/2 -bottom-6 sm:-bottom-7 md:-bottom-8 drop-shadow-xl">
+                  <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16">
+                    <Image src={sealSrc} alt="Sello" fill className="object-contain" />
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             )}
           </div>
 
@@ -62,15 +67,17 @@ export default function DressCodeGiftSection({
           <div className="mt-12 sm:mt-14 md:mt-16 w-full flex items-center justify-center">
             <div className="bg-white/95 backdrop-blur-sm rounded-[24px] shadow-2xl border border-amber-900/10 w-[92%] sm:w-[86%] md:w-[80%]">
               <div className="p-6 sm:p-7 md:p-8 text-center text-amber-900">
-                <h4 className="font-ballet text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4">{giftTitle}</h4>
-                {giftIconSrc && (
-                  <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4">
-                    <Image src={giftIconSrc} alt="Regalo" fill className="object-contain" />
-                  </div>
-                )}
-                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-amber-900/90 max-w-[48ch] mx-auto">
-                  {giftMessage}
-                </p>
+                <RevealGroup stagger={120}>
+                  <h4 className="font-ballet text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4">{giftTitle}</h4>
+                  {giftIconSrc && (
+                    <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4">
+                      <Image src={giftIconSrc} alt="Regalo" fill className="object-contain" />
+                    </div>
+                  )}
+                  <p className="text-sm sm:text-base md:text-lg leading-relaxed text-amber-900/90 max-w-[48ch] mx-auto">
+                    {giftMessage}
+                  </p>
+                </RevealGroup>
               </div>
             </div>
           </div>
