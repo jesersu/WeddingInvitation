@@ -10,11 +10,17 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* Map script font token so Tailwind class `font-script` works */
+  --font-script: var(--font-script);
+  /* Map elegant serif token so Tailwind class `font-elegant` works */
+  --font-elegant: var(--font-elegant);
+  /* Map Ballet token so Tailwind class `font-ballet` works */
+  --font-ballet: var(--font-ballet);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #f0f3f4;
     --foreground: #ededed;
   }
 }
@@ -23,4 +29,34 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Floating animations for floral overlays */
+@keyframes floatY {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(0.3deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes floatYReverse {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(6px) rotate(-0.3deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.float-top {
+  animation: floatY 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.float-bottom {
+  animation: floatYReverse 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Optional: subtle paper texture background for the card */
+.card-paper {
+  background: #fff;
+  background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 6px 6px;
 }
