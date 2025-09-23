@@ -40,22 +40,22 @@ export default function DressCodeGiftSection({
         <div className="w-full max-w-[720px] flex flex-col items-center">
           {/* Top circular badge */}
           <div className="relative">
-            <div className="rounded-full bg-[#6b8593] text-white w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] md:w-[340px] md:h-[340px] shadow-xl flex flex-col items-center justify-center gap-3">
+            <div className="relative mx-auto rounded-full bg-[#6b8593] text-white w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] md:w-[340px] md:h-[340px] shadow-xl flex flex-col items-center justify-center gap-3">
               <RevealGroup stagger={120}>
-                <h3 className="font-ballet text-2xl sm:text-3xl md:text-4xl text-center px-6 leading-tight">{circleTitle}</h3>
+                <h3 className="font-ballet text-3xl sm:text-3xl md:text-4xl text-center px-6 leading-tight">{circleTitle}</h3>
                 {circleIconSrc && (
-                  <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20">
+                  <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-auto">
                     <Image src={circleIconSrc} alt="Icon" fill className="object-contain invert" />
                   </div>
                 )}
-                <div className="uppercase tracking-wide text-sm sm:text-base md:text-lg">{circleSubtitle}</div>
+                <div className="uppercase text-sm sm:text-base md:text-lg text-center">{circleSubtitle}</div>
               </RevealGroup>
             </div>
             {/* Wax seal overlapping */}
             {sealSrc && (
               <Reveal variant="fade-up" delay={200}>
-                <div className="absolute left-1/2 -translate-x-1/2 -bottom-6 sm:-bottom-7 md:-bottom-8 drop-shadow-xl">
-                  <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16">
+                <div className="absolute left-1/2 -translate-x-1/2 -bottom-12 sm:-bottom-7 md:-bottom-8 drop-shadow-xl">
+                  <div className="relative w-30 h-30 sm:w-14 sm:h-14 md:w-16 md:h-16">
                     <Image src={sealSrc} alt="Sello" fill className="object-contain" />
                   </div>
                 </div>

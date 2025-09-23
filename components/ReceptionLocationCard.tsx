@@ -38,7 +38,7 @@ export default function ReceptionLocationCard({
 
               {/* Icon */}
               {iconSrc ? (
-                <div className="relative w-16 h-16 md:w-20 md:h-20">
+                <div className="relative w-40 h-40 md:w-40 md:h-40 mx-auto">
                   <Image src={iconSrc} alt="Reception icon" fill className="object-contain" />
                 </div>
               ) : (
