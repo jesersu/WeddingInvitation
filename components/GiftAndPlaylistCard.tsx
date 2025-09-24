@@ -38,7 +38,7 @@ export default function GiftAndPlaylistCard({
       )}
 
       {/* Main card */}
-      <div className="w-full max-w-[760px] bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-amber-900/10 px-6 sm:px-10 py-8 sm:py-12">
+      <div className="w-full max-w-[760px] bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-terracotta px-6 sm:px-10 py-8 sm:py-12">
         {/* Gift section */}
         <div className="text-center text-amber-900">
           <h3 className="font-ballet text-3xl sm:text-4xl text-[#5b7b51]">{titleGift}</h3>
@@ -47,7 +47,7 @@ export default function GiftAndPlaylistCard({
               <Image src={giftIconSrc} alt="Gift icon" fill className="object-contain" />
             </div>
           )}
-          <p className="max-w-[56ch] mx-auto text-base sm:text-lg leading-relaxed text-amber-900/90">
+          <p className="max-w-[56ch] mx-auto text-base sm:text-lg leading-relaxed text-terracotta/90">
             {giftMessage}
           </p>
           {giftCtaUrl && (
@@ -67,7 +67,7 @@ export default function GiftAndPlaylistCard({
         {/* Playlist section */}
         <div className="text-center text-amber-900">
           <h3 className="font-ballet text-3xl sm:text-4xl text-[#5b7b51]">{titlePlaylist}</h3>
-          <p className="max-w-[62ch] mx-auto text-base sm:text-lg leading-relaxed text-amber-900/90 mt-4">
+          <p className="max-w-[62ch] mx-auto text-base sm:text-lg leading-relaxed text-terracotta mt-4">
             {playlistMessage}
           </p>
           {playlistCtaUrl && (

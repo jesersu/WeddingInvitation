@@ -34,14 +34,14 @@ export default function ItineraryCard({
 
       {/* Centered rounded card */}
       <div className="absolute inset-0 flex items-center justify-center p-4">
-        <div className="relative w-full max-w-[300px] bg-white/95 backdrop-blur-sm rounded-[100px] shadow-2xl border border-amber-900/10 px-4 sm:px-6 md:px-10 py-6 md:py-10">
+        <div className="relative w-full max-w-[300px] bg-white/95 backdrop-blur-sm rounded-[100px] shadow-2xl border border-terracotta px-4 sm:px-6 md:px-10 py-6 md:py-10">
           {/* Title */}
-          <h3 className="text-center font-ballet text-3xl md:text-4xl text-amber-900 mb-4 md:mb-6">{title}</h3>
+          <h3 className="text-center font-ballet text-3xl md:text-4xl text-terracotta mb-4 md:mb-6">{title}</h3>
 
           {/* Timeline layout */}
           <div className="relative grid grid-cols-[1fr_40px_1fr] gap-4 md:gap-6">
             {/* Vertical line */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-amber-900/20" />
+            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-terracotta/20" />
 
             {/* Left column */}
             <div className="space-y-8 md:space-y-10">
@@ -60,7 +60,7 @@ export default function ItineraryCard({
             </div>
 
             {/* Right column (staggered lower) */}
-            <div className="space-y-8 md:space-y-10 mt-4 md:mt-5">
+            <div className="space-y-8 md:space-y-10 mt-10 md:mt-5">
               <RevealGroup stagger={140} baseDelay={80}>
                 {rightItems.map((item, idx) => (
                   <ItineraryEntry key={`R-${idx}`} side="right" index={idx} item={item} />
@@ -80,8 +80,8 @@ function ItineraryEntry({ side, item }: { side: "left" | "right"; index: number;
       <div className={`flex flex-col gap-2 max-w-[240px] ${side === "left" ? "items-end text-right" : "items-start text-left"}`}>
         <EntryIcon src={item.iconSrc} />
         <div className="-mt-5">
-          <div className="font-elegant text-amber-900 text-base md:text-lg">{item.time}</div>
-          <div className="text-amber-900/90 text-sm md:text-base">{item.label}</div>
+          <div className="font-elegant text-terracotta text-base md:text-lg">{item.time}</div>
+          <div className="text-terracotta/90 text-sm md:text-base">{item.label}</div>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@ function EntryIcon({ src }: { src?: string }) {
 function HeartMarker() {
   return (
     <div className="relative my-0">
-      <div className="w-5 h-5 rounded-full bg-amber-900/20 flex items-center justify-center">
+      <div className="w-5 h-5 rounded-full bg-terracotta/20 flex items-center justify-center">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="#a16207" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 21s-6.72-4.35-9.33-7.3C.76 11.53 1.44 8.5 3.76 7.36A4.17 4.17 0 0 1 9 8.7 4.17 4.17 0 0 1 14.24 7.36c2.32 1.14 3 4.17.09 6.34C18.72 16.65 12 21 12 21z" />
         </svg>

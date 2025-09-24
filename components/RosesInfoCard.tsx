@@ -63,7 +63,7 @@ export default function RosesInfoCard({
           )}
 
           {/* Intro line */}
-          <p className="text-center font-elegant text-amber-900/90 text-lg sm:text-xl mb-4 sm:mb-6">
+          <p className="text-center font-elegant text-terracotta text-lg sm:text-xl mb-4 sm:mb-6">
             {intro}
           </p>
 
@@ -74,7 +74,7 @@ export default function RosesInfoCard({
                 <h4 className="font-elegant tracking-wide text-[18px] sm:text-[20px] text-green-800 mb-2">
                   {sec.heading}
                 </h4>
-                <div className="text-amber-900/90 space-y-1">
+                <div className="text-terracotta/90 space-y-1">
                   {sec.items.map((line, i) => (
                     <p key={i} className="font-elegant text-[16px] sm:text-[18px]">
                       {line}

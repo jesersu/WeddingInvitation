@@ -37,11 +37,11 @@ export default function ConfirmAttendanceCard({
 
       {/* Centered floating card */}
       <div className="absolute inset-0 flex items-center justify-center p-4">
-        <div className="relative w-full max-w-[720px] bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-amber-900/10 px-6 sm:px-10 py-8 sm:py-10">
+        <div className="relative w-full max-w-[720px] bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-terracotta px-6 sm:px-10 py-8 sm:py-10">
           <div className="text-center text-amber-900">
             <RevealGroup stagger={120}>
-              <h3 className="font-ballet text-3xl sm:text-4xl mb-3 sm:mb-4 text-amber-900/90">{title}</h3>
-              <p className="max-w-[62ch] mx-auto text-base sm:text-lg leading-relaxed text-amber-900/90">
+              <h3 className="font-ballet text-3xl sm:text-4xl mb-3 sm:mb-4 text-terracotta">{title}</h3>
+              <p className="max-w-[62ch] mx-auto text-base sm:text-lg leading-relaxed text-terracotta/90">
                 {message}
                 {deadline && (
                   <>

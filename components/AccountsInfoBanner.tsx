@@ -60,7 +60,7 @@ export default function AccountsInfoBanner({
 
           {/* Content */}
           <div className="absolute inset-0 grid place-items-center px-6 py-8">
-            <div className="text-center text-amber-900">
+            <div className="text-center text-terracotta">
               <Reveal variant="fade-down">
                 <h3 className="font-ballet text-3xl md:text-4xl tracking-wide mb-2">{title}</h3>
               </Reveal>
@@ -70,7 +70,7 @@ export default function AccountsInfoBanner({
                     <p key={idx} className="text-base md:text-xl tracking-wide">
                       <span className="font-semibold">{line.label}</span>
                       <span className="mx-2">: </span>
-                      <span className="underline decoration-amber-900/30 underline-offset-4">{line.value}</span>
+                      <span className="underline decoration-terracotta underline-offset-4">{line.value}</span>
                     </p>
                   ))}
                 </div>

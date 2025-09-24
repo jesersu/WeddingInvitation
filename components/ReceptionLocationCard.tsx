@@ -30,8 +30,8 @@ export default function ReceptionLocationCard({
 
       {/* Centered floating card */}
       <div className="absolute inset-0 flex items-center justify-center p-4">
-        <div className="relative w-full max-w-[720px] bg-white/95 backdrop-blur-sm rounded-[40px] shadow-2xl border border-amber-900/10 px-6 md:px-10 py-6 md:py-8">
-          <div className="flex flex-col items-center text-amber-900 gap-3 md:gap-4">
+        <div className="relative w-full max-w-[720px] bg-white/95 backdrop-blur-sm rounded-[40px] shadow-2xl border border-terracotta px-6 md:px-10 py-6 md:py-8">
+          <div className="flex flex-col items-center text-terracotta gap-3 md:gap-4">
             <RevealGroup stagger={120}>
               {/* Title */}
               <h3 className="font-ballet text-3xl md:text-4xl text-center">{title}</h3>

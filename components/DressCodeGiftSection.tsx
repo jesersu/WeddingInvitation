@@ -65,8 +65,8 @@ export default function DressCodeGiftSection({
 
           {/* Gift suggestion card */}
           <div className="mt-12 sm:mt-14 md:mt-16 w-full flex items-center justify-center">
-            <div className="bg-white/95 backdrop-blur-sm rounded-[24px] shadow-2xl border border-amber-900/10 w-[92%] sm:w-[86%] md:w-[80%]">
-              <div className="p-6 sm:p-7 md:p-8 text-center text-amber-900">
+            <div className="bg-white/95 backdrop-blur-sm rounded-[24px] shadow-2xl border border-terracotta w-[92%] sm:w-[86%] md:w-[80%]">
+              <div className="p-6 sm:p-7 md:p-8 text-center text-terracotta">
                 <RevealGroup stagger={120}>
                   <h4 className="font-ballet text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4">{giftTitle}</h4>
                   {giftIconSrc && (
@@ -74,7 +74,7 @@ export default function DressCodeGiftSection({
                       <Image src={giftIconSrc} alt="Regalo" fill className="object-contain" />
                     </div>
                   )}
-                  <p className="text-sm sm:text-base md:text-lg leading-relaxed text-amber-900/90 max-w-[48ch] mx-auto">
+                  <p className="text-sm sm:text-base md:text-lg leading-relaxed text-terracotta/90 max-w-[48ch] mx-auto">
                     {giftMessage}
                   </p>
                 </RevealGroup>

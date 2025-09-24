@@ -47,7 +47,7 @@ export default function Home() {
         <Reveal delay={160}>
           <WeddingCountdown
           targetDate="2026-06-20T16:00:00-05:00"
-          backgroundSrc="/bg-roses-2.png"
+          backgroundSrc="/bg-roses-4.png"
           title="Cuenta regresiva para nuestra boda"
         />
         </Reveal>

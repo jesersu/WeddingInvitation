@@ -30,7 +30,7 @@ export default function CouplePhotoFramed({ src, alt = "Pareja", caption, classN
               {/* Bottom bar with soft gradient */}
               <div className="bg-gradient-to-t from-amber-50 to-transparent p-4 text-center">
                 {caption && (
-                  <p className="text-amber-900/90 font-medium">{caption}</p>
+                  <p className="text-terracotta font-medium">{caption}</p>
                 )}
               </div>
             </RevealGroup>

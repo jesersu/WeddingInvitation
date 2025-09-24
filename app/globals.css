@@ -16,6 +16,8 @@
   --font-elegant: var(--font-elegant);
   /* Map Ballet token so Tailwind class `font-ballet` works */
   --font-ballet: var(--font-ballet);
+  /* Custom brand color: terracotta */
+  --color-terracotta: #E2725B;
 }
 
 @media (prefers-color-scheme: dark) {

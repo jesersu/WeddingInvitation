@@ -48,21 +48,21 @@ export default function InvitationCard({
         {/* Content */}
         <div className="relative z-20 h-full flex flex-col justify-center px-8 items-stretch gap-2">
         {/* Row 1: Title (left) */}
-        <p className="font-ballet text-[60px] text-amber-800/80 self-center text-center">
+        <p className="font-ballet text-[40px] text-amber-800/80 self-center text-center">
             {title}
         </p>
 
-        <p className="font-script text-5xl md:text-6xl text-amber-900 self-center self-end text-right pr-20 float-bottom">
+        <p className="font-script text-5xl md:text-6xl text-terracotta self-right self-end text-right pr-5 float-bottom">
             {couple.groom}
         </p>
 
         {/* Row 2: Subtitle (center) */}
-        <p className="font-ballet text-[60px] text-amber-800/80 self-center text-center">
+        <p className="font-ballet text-[25px] text-amber-800/80 text-right pr-20">
             {subtitle}
         </p>
 
         {/* Row 3: Bride (right) */}
-        <h1 className="font-script text-5xl md:text-6xl text-amber-900 float-top self-start text-left pl-20">
+        <h1 className="font-script text-5xl md:text-6xl text-terracotta float-top self-start text-left pl-20">
             {couple.bride}
         </h1>
         </div>

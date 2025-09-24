@@ -33,10 +33,10 @@ export default function FloralBackdropCard({
 
         <div className="mx-auto max-w-[400px] rounded-xl bg-white/95 backdrop-blur-sm shadow-xl border border-amber-900/10 p-6 sm:p-8 text-center">
           {title && (
-            <h3 className="font-elegant text-2xl sm:text-3xl text-amber-900 mb-2">{title}</h3>
+            <h3 className="font-elegant text-2xl sm:text-3xl text-terracotta mb-2">{title}</h3>
           )}
           {message && (
-            <p className="text-amber-900/80 leading-relaxed">
+            <p className="text-terracotta/80 leading-relaxed">
               {message}
             </p>
           )}

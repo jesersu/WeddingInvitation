@@ -84,7 +84,7 @@ export default function MusicPlayer({ src, title = "Wedding Song", autoPlay = fa
             <div className="absolute inset-2 rounded-full border border-amber-900/10" />
           </div>
           <div>
-            <p className="font-elegant text-amber-900 text-lg leading-none">{title}</p>
+            <p className="font-elegant text-terracotta text-lg leading-none">{title}</p>
             <p className="text-amber-800/70 text-xs">{fmt(progress)} / {fmt(duration)}</p>
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function MusicPlayer({ src, title = "Wedding Song", autoPlay = fa
           max={Math.max(1, Math.floor(duration))}
           value={Math.floor(progress)}
           onChange={onSeek}
-          className="w-full accent-amber-700"
+          className="w-full accent-terracotta"
         />
       </div>
     </div>

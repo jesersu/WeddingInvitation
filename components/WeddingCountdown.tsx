@@ -46,7 +46,7 @@ export default function WeddingCountdown({
 
       {/* Content overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-        <h3 className="font-elegant text-2xl md:text-3xl text-amber-900 mb-4 drop-shadow-sm">
+        <h3 className="font-elegant text-2xl md:text-3xl text-terracotta mb-4 drop-shadow-sm">
           {title}
         </h3>
         <div className="grid grid-cols-4 gap-3 sm:gap-6">
@@ -63,10 +63,10 @@ export default function WeddingCountdown({
 function TimeBox({ label, value }: { label: string; value: number }) {
   return (
     <div className="w-20 sm:w-24 md:w-28 h-20 sm:h-24 md:h-28 rounded-xl bg-white/90 backdrop-blur-sm shadow-xl border border-amber-900/10 flex flex-col items-center justify-center">
-      <div className="font-script text-3xl sm:text-4xl md:text-5xl text-amber-900 leading-none">
+      <div className="font-script text-3xl sm:text-4xl md:text-5xl text-terracotta leading-none">
         {String(value).padStart(2, "0")}
       </div>
-      <div className="text-amber-800/80 text-xs sm:text-sm mt-1">{label}</div>
+      <div className="text-terracotta/80 text-xs sm:text-sm mt-1">{label}</div>
     </div>
   );
 }
