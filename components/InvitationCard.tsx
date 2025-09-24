@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import TypingText from './TypingText';
 
 interface InvitationCardProps {
   title?: string;
@@ -52,9 +53,14 @@ export default function InvitationCard({
             {title}
         </p>
 
-        <p className="font-script text-5xl md:text-6xl text-terracotta self-right self-end text-right pr-5 float-bottom">
-            {couple.groom}
-        </p>
+        <TypingText
+          as="p"
+          text={couple.groom}
+          className="font-script text-5xl md:text-6xl text-terracotta self-right self-end text-right pr-5 float-bottom"
+          speed={150}
+          startDelay={80}
+          once
+        />
 
         {/* Row 2: Subtitle (center) */}
         <p className="font-ballet text-[25px] text-amber-800/80 text-right pr-20">
@@ -62,9 +68,14 @@ export default function InvitationCard({
         </p>
 
         {/* Row 3: Bride (right) */}
-        <h1 className="font-script text-5xl md:text-6xl text-terracotta float-top self-start text-left pl-20">
-            {couple.bride}
-        </h1>
+        <TypingText
+          as="h1"
+          text={couple.bride}
+          className="font-script text-5xl md:text-6xl text-terracotta float-top self-start text-left pl-20"
+          speed={150}
+          startDelay={220}
+          once
+        />
         </div>
 
       {/* Subtle inner border to mimic print */}

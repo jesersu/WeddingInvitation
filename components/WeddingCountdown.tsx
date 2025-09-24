@@ -46,7 +46,7 @@ export default function WeddingCountdown({
 
       {/* Content overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-        <h3 className="font-elegant text-2xl md:text-3xl text-terracotta mb-4 drop-shadow-sm">
+        <h3 className="font-elegant text-2xl md:text-3xl text-terracotta mb-4 drop-shadow-sm inline-block bg-white/50 backdrop-blur-sm rounded-lg px-3 py-1">
           {title}
         </h3>
         <div className="grid grid-cols-4 gap-3 sm:gap-6">

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import TypingText from "./TypingText";
 
 interface MusicPlayerProps {
   src: string; // e.g. /music/wedding.mp3 in public/
@@ -84,7 +85,17 @@ export default function MusicPlayer({ src, title = "Wedding Song", autoPlay = fa
             <div className="absolute inset-2 rounded-full border border-amber-900/10" />
           </div>
           <div>
-            <p className="font-elegant text-terracotta text-lg leading-none">{title}</p>
+         
+            <TypingText
+              as="p"
+              text={title}
+              className="font-elegant text-terracotta text-lg leading-none"
+              speed={150}
+              startDelay={220}
+              once
+            />
+                     
+           
             <p className="text-amber-800/70 text-xs">{fmt(progress)} / {fmt(duration)}</p>
           </div>
         </div>

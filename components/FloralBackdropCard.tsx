@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import TypingText from "./TypingText";
 
 interface FloralBackdropCardProps {
   backgroundSrc?: string; // path in /public, e.g. /floral-backdrop.jpg or .png
@@ -33,12 +34,25 @@ export default function FloralBackdropCard({
 
         <div className="mx-auto max-w-[400px] rounded-xl bg-white/95 backdrop-blur-sm shadow-xl border border-amber-900/10 p-6 sm:p-8 text-center">
           {title && (
-            <h3 className="font-elegant text-2xl sm:text-3xl text-terracotta mb-2">{title}</h3>
+            <TypingText
+              as="h3"
+              text={title}
+              className="font-elegant text-2xl sm:text-3xl text-terracotta mb-2"
+              speed={48}
+              startDelay={220}
+              once
+            />
           )}
           {message && (
-            <p className="text-terracotta/80 leading-relaxed">
-              {message}
-            </p>
+
+            <TypingText
+            as="p"
+            text= {message}
+            className="text-terracotta/80 leading-relaxed"
+            speed={48}
+            startDelay={220}
+            once
+            />
           )}
           {children}
         </div>

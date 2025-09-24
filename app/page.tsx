@@ -14,10 +14,19 @@ import AccountsInfoBanner from "../components/AccountsInfoBanner";
 import GiftAndPlaylistCard from "../components/GiftAndPlaylistCard";
 import ConfirmAttendanceCard from "../components/ConfirmAttendanceCard";
 import { Reveal } from "../components/Reveal";
+import CoverPage from "../components/CoverPage";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-rose-50 via-amber-50 to-white">
+      {/* Full-screen cover overlay: hides content until OPEN is pressed */}
+      <CoverPage
+        title="Aaron & Johanna"
+        subtitle="Bienvenidos"
+        coupleImageSrc="/couple-2.png"
+        backgroundSrc="/cover-page-2.jpg"
+        rememberOpen={false}
+      />
       <main className="max-w-5xl mx-auto py-12 px-4 space-y-10">
         <Reveal>
           <InvitationCard
@@ -46,7 +55,7 @@ export default function Home() {
         {/* Countdown section */}
         <Reveal delay={160}>
           <WeddingCountdown
-          targetDate="2026-06-20T16:00:00-05:00"
+          targetDate="2025-11-08T11:00:00-05:00"
           backgroundSrc="/bg-roses-4.png"
           title="Cuenta regresiva para nuestra boda"
         />
@@ -55,7 +64,7 @@ export default function Home() {
         {/* Big date banner */}
         <Reveal delay={200}>
           <WeddingDateBanner
-          date="2026-06-20T16:00:00-05:00"
+          date="2025-11-08T11:00:00-05:00"
           backgroundSrc="/bg-date.png"
           subtitle="Reserva la fecha"
         />
@@ -132,12 +141,12 @@ export default function Home() {
         />
         </Reveal>
 
-        {/* Another couple photo with a beautiful frame */}
+        {/* Another couple photo with a beautiful frame
         <CouplePhotoFramed
           src="/picture-1.png"
           alt="Otra foto de la pareja"
           caption="Nuestro siguiente capítulo juntos"
-        />
+        /> */}
 
 
         {/* Dress code + gift suggestion section */}
