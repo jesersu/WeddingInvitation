@@ -31,7 +31,7 @@ export default function Home() {
         <Reveal>
           <InvitationCard
           title="¡Nos casamos!"
-          couple={{ groom: "Primo", bride: "Prima" }}
+          couple={{ groom: "Aaron", bride: "Johanna" }}
           subtitle="y"
           topImageSrc="/floral-top-1.png"
           bottomImageSrc="/floral-bottom-1.png"
@@ -73,7 +73,7 @@ export default function Home() {
         {/* Couple Photo */}
         <Reveal delay={240}>
           <CouplePhoto
-          src="/picture-1.png"
+          src="/goku-milk.jpg"
           alt="Pareja"
           caption="Con amor, Edson & Lisseth"
         />
