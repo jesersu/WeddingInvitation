@@ -15,7 +15,8 @@ interface CouplePhotoFramedProps {
  */
 export default function CouplePhotoFramed({ src, alt = "Pareja", caption, className = "" }: CouplePhotoFramedProps) {
   return (
-    <section className={`w-full flex items-center justify-center ${className}`}>
+    <section className={`w-full flex items-center justify-center ${className} -mt-1
+    0`}>
       <div className="relative">
         {/* Ornate gradient frame */}
         <Reveal variant="scale">

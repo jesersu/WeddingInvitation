@@ -25,7 +25,7 @@ export default function ItineraryCard({
   const markers = 6;
 
   return (
-    <section className="relative w-full overflow-hidden w-screen max-w-none mx-[calc(50%-50vw)] sm:w-full sm:max-w-5xl sm:mx-auto">
+    <section className="relative w-full overflow-hidden w-screen max-w-none mx-[calc(50%-50vw)] sm:w-full sm:max-w-5xl sm:mx-auto -mt-21">
       {/* Background */}
       <div className="relative h-[720px] sm:h-[800px] md:h-[880px]">
         <Image src={backgroundSrc} alt="Roses background" fill className="object-cover" priority />

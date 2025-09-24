@@ -33,7 +33,7 @@ export default function RosesInfoCard({
   ],
 }: RosesInfoCardProps) {
   return (
-    <section className="relative overflow-hidden w-screen max-w-none mx-[calc(50%-50vw)] rounded-none shadow-sm sm:w-full sm:max-w-5xl sm:mx-auto sm:rounded-2xl -mt-10">
+    <section className="relative overflow-hidden w-screen max-w-none mx-[calc(50%-50vw)] rounded-2xl shadow-sm sm:w-full sm:max-w-5xl sm:mx-auto sm:rounded-2xl -mt-20">
       {/* Background */}
       <div className="relative h-[680px] sm:h-[760px] md:h-[840px]">
         <Image src={backgroundSrc} alt="Roses background" fill className="object-cover" priority />
@@ -41,7 +41,7 @@ export default function RosesInfoCard({
       </div>
 
       {/* Floating paper card */}
-      <div className="absolute inset-0 flex items-center justify-center p-4 -mt-16">
+      <div className="absolute inset-0 flex items-center justify-center border-amber-900/10 p-4 -mt-16">
         <div className="relative w-full max-w-[250px] sm:max-w-[200px] md:max-w-[500px] bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border border-amber-900/10 px-4 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10">
           {/* Decorative corners (optional) */}
           {cornerTopLeftSrc && (

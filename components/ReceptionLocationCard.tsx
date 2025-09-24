@@ -21,7 +21,7 @@ export default function ReceptionLocationCard({
   iconSrc = "/icons/reception.png",
 }: ReceptionLocationCardProps) {
   return (
-    <section className="relative w-full overflow-hidden w-screen max-w-none mx-[calc(50%-50vw)] sm:w-full sm:max-w-5xl sm:mx-auto">
+    <section className="relative w-full overflow-hidden w-screen max-w-none mx-[calc(50%-50vw)] sm:w-full sm:max-w-5xl sm:mx-auto -mt-20">
       {/* Background */}
       <div className="relative h-[420px] sm:h-[480px] md:h-[520px]">
         <Image src={backgroundSrc} alt="Roses background" fill priority className="object-cover" />

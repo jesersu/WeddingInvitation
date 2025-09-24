@@ -73,7 +73,7 @@ export default function Home() {
         {/* Roses Info Card (parents, padrinos, etc.) */}
         <Reveal delay={280}>
           <RosesInfoCard
-          backgroundSrc="/bg-roses-5.png"
+          backgroundSrc="/bg-roses-7.png"
           topIconSrc="/bg-ring-1.png"
           cornerTopLeftSrc="/bg-roses-3.png"
           cornerBottomRightSrc="/bg-roses-4.png"
@@ -91,17 +91,17 @@ export default function Home() {
         {/* Itinerary */}
         <Reveal>
           <ItineraryCard
-          backgroundSrc="/bg-roses-2.png"
+          backgroundSrc="/bg-roses-8.png"
           title="Itinerario"
           leftItems={[
-            { time: "5:00 pm", label: "Ceremonia Religiosa", iconSrc: "/icon/CHURCH.png" },
-            { time: "7:00 pm", label: "Ceremonia Civil", iconSrc: "/icon/WEDDING_VOWS.png" },
-            { time: "9:00 pm", label: "Cena", iconSrc: "/icon/CUTLERY.png" },
+            { time: "11:00 am", label: "Ceremonia Religiosa", iconSrc: "/icon/CHURCH.png" },
+            { time: "1:30 pm", label: "Ceremonia Civil", iconSrc: "/icon/WEDDING_VOWS.png" },
+            { time: "3:00 pm", label: "Comida", iconSrc: "/icon/CUTLERY.png" },
           ]}
           rightItems={[
-            { time: "6:40 pm", label: "Recepción", iconSrc: "/icon/CAKE.png" },
-            { time: "7:00 pm", label: "Fotos / Brindis", iconSrc: "/icon/DRINKING.png" },
-            { time: "10:00 pm", label: "Inicio de fiesta", iconSrc: "/icon/MUSIC.png" },
+            { time: "1:00 pm", label: "Recepción", iconSrc: "/icon/CAKE.png" },
+            { time: "2:00 pm", label: "Fotos / Brindis", iconSrc: "/icon/DRINKING.png" },
+            { time: "4:00 pm", label: "Inicio de fiesta", iconSrc: "/icon/MUSIC.png" },
           ]}
         />
         </Reveal>
@@ -112,10 +112,10 @@ export default function Home() {
         <Reveal>
           <ChurchLocationCard
           title="Ceremonia Religiosa"
-          backgroundSrc="/bg-roses-2.png"
-          time="5:00 pm"
-          churchName="Iglesia San Pedro"
-          mapUrl="https://www.google.com/maps?q=Iglesia+San+Pedro"
+          backgroundSrc="/bg-roses-9.png"
+          time="11:00 am"
+          churchName="Iglesia Santisima Cruz de la Tomilla - Cayma"
+          mapUrl="https://maps.app.goo.gl/xvoLw6hTKLDVatez6"
           iconSrc="/icon/CHURCH.png"
         />
         </Reveal>
@@ -124,10 +124,10 @@ export default function Home() {
         <Reveal>
           <ReceptionLocationCard
           title="Recepción"
-          backgroundSrc="/bg-roses-2.png"
-          time="6:40 pm"
-          venueName="Salón Principal"
-          mapUrl="https://www.google.com/maps?q=Salon+Principal+Recepcion"
+          backgroundSrc="/bg-roses-7.png"
+          time="1:00 pm"
+          venueName="Boulevard Paraiso"
+          mapUrl="https://maps.app.goo.gl/S96Rn3avCsm1U1rr7"
           iconSrc="/icon/CAKE.png"
         />
         </Reveal>
