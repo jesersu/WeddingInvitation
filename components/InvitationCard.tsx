@@ -23,7 +23,7 @@ export default function InvitationCard({
       <div className="absolute inset-0 card-paper" />
 
       {/* Top floral overlay */}
-      <div className="absolute left-0 right-0 top-0 pointer-events-none select-none float-top z-10">
+      <div className="absolute left-0 right-0 top-0 pointer-events-none select-none float-top z-10 -mt-10">
         <Image
           src={topImageSrc}
           alt="Top floral decoration"
@@ -35,7 +35,7 @@ export default function InvitationCard({
       </div>
 
       {/* Bottom floral overlay */}
-      <div className="absolute left-0 right-0 bottom-0 pointer-events-none select-none float-bottom z-10">
+      <div className="absolute left-0 right-0 bottom-0 pointer-events-none select-none float-bottom z-10 -mb-7">
         <Image
           src={bottomImageSrc}
           alt="Bottom floral decoration"

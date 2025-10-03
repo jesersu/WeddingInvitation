@@ -8,7 +8,7 @@ import RosesInfoCard from "../components/RosesInfoCard";
 import ItineraryCard from "../components/ItineraryCard";
 import ChurchLocationCard from "../components/ChurchLocationCard";
 import ReceptionLocationCard from "../components/ReceptionLocationCard";
-import CouplePhotoFramed from "../components/CouplePhotoFramed";
+
 import DressCodeGiftSection from "../components/DressCodeGiftSection";
 import AccountsInfoBanner from "../components/AccountsInfoBanner";
 import GiftAndPlaylistCard from "../components/GiftAndPlaylistCard";
@@ -22,9 +22,10 @@ export default function Home() {
       {/* Full-screen cover overlay: hides content until OPEN is pressed */}
       <CoverPage
         title="Aaron & Johanna"
-        subtitle="Bienvenidos"
+        subtitle="Empieza una historia..."
         coupleImageSrc="/couple-2.png"
-        backgroundSrc="/cover-page-2.jpg"
+        backgroundSrc="/bg-web-2.jpg"
+        backgroundMobile="/bg-mobile.jpg"
         rememberOpen={false}
       />
       <main className="max-w-5xl mx-auto py-12 px-4 space-y-10">
@@ -33,8 +34,8 @@ export default function Home() {
           title="¡Nos casamos!"
           couple={{ groom: "Aaron", bride: "Johanna" }}
           subtitle="y"
-          topImageSrc="/floral-top-1.png"
-          bottomImageSrc="/floral-bottom-1.png"
+          topImageSrc="/flower-top-6.png"
+          bottomImageSrc="/flower-bottom-1.png"
         />
         </Reveal>
 
@@ -46,7 +47,7 @@ export default function Home() {
         {/* Floral backdrop with shadowed message card */}
         <Reveal delay={120}>
           <FloralBackdropCard
-          backgroundSrc="/bg-roses-2.png"
+          backgroundSrc="/flower-top-6.png"
           title="Un mensaje para nuestros invitados"
           message="Nos llena de alegría compartir este momento con ustedes. ¡Gracias por ser parte de nuestra historia!"
         />
@@ -82,16 +83,16 @@ export default function Home() {
         {/* Roses Info Card (parents, padrinos, etc.) */}
         <Reveal delay={280}>
           <RosesInfoCard
-          backgroundSrc="/bg-roses-7.png"
+          backgroundSrc="/bg-terr-2.png"
           topIconSrc="/bg-ring-1.png"
           cornerTopLeftSrc="/bg-roses-3.png"
           cornerBottomRightSrc="/bg-roses-4.png"
           intro="Con la bendición de nuestros padres"
           sections={[
-            { heading: "PADRES DEL NOVIO", items: ["Geny Flores Leiva Cuarite", "Luis Hernán Espeźua Eduardo"] },
-            { heading: "PADRES DE LA NOVIA", items: ["Elena Bellido Palma", "Victor Moisés Manrique"] },
-            { heading: "PADRINOS DE RELIGIOSO", items: ["Hernán Abad Espeźua Leiva", "Maria Teresa Quico Dueñas"] },
-            { heading: "TESTIGOS DE RELIGIOSO", items: ["Roxana Altamirano Bellido", "Jose Antonio Pinto Sanchez"] },
+            { heading: "PADRES DEL NOVIO", items: ["Noemi Leticia Castillo Cortez", ""] },
+            { heading: "PADRES DE LA NOVIA", items: ["Frida Estefa Suyo Huarcaya", "Johon Salas Lagos"] },
+            { heading: "PADRINOS DE RELIGIOSO", items: ["Prof. Freddy Huamany Salas", "Lic. Amanda Mendoza Pineda"] },
+            { heading: "PADRINOS DE LAZOS", items: ["Vicente Salas Lagos", "Vicentina Suárez Peralta"] },
           ]}
         />
         </Reveal>
@@ -100,7 +101,7 @@ export default function Home() {
         {/* Itinerary */}
         <Reveal>
           <ItineraryCard
-          backgroundSrc="/bg-roses-8.png"
+          backgroundSrc="/bg-terr-4.png"
           title="Itinerario"
           leftItems={[
             { time: "11:00 am", label: "Ceremonia Religiosa", iconSrc: "/icon/CHURCH.png" },
@@ -121,10 +122,10 @@ export default function Home() {
         <Reveal>
           <ChurchLocationCard
           title="Ceremonia Religiosa"
-          backgroundSrc="/bg-roses-9.png"
+          backgroundSrc="/bg-terr-8.png"
           time="11:00 am"
           churchName="Iglesia Santisima Cruz de la Tomilla - Cayma"
-          mapUrl="https://maps.app.goo.gl/xvoLw6hTKLDVatez6"
+          mapUrl="https://maps.app.goo.gl/AfT2Yk1YWmnHmC3M8"
           iconSrc="/icon/CHURCH.png"
         />
         </Reveal>
@@ -133,7 +134,7 @@ export default function Home() {
         <Reveal>
           <ReceptionLocationCard
           title="Recepción"
-          backgroundSrc="/bg-roses-7.png"
+          backgroundSrc="/bg-terr-5.png"
           time="1:00 pm"
           venueName="Boulevard Paraiso"
           mapUrl="https://maps.app.goo.gl/S96Rn3avCsm1U1rr7"
@@ -152,7 +153,7 @@ export default function Home() {
         {/* Dress code + gift suggestion section */}
         <Reveal>
           <DressCodeGiftSection
-          backgroundSrc="/bg-roses-2.png"
+          backgroundSrc="/flower-top-4.png"
           circleTitle="Código de Vestimenta"
           circleSubtitle="ELEGANTE"
           circleIconSrc="/icon/DRESS-CODE.png"
@@ -171,10 +172,10 @@ export default function Home() {
           floralLeftSrc="/flower-1.png"
           floralRightSrc="/flower-2.png"
           lines={[
-            { label: "BCP", value: "XXXXXXXXX" },
-            { label: "CCI", value: "XXXXXXXXXXXXXXXXXXXX" },
-            { label: "YAPE", value: "XXXXXXXXX" },
-            { label: "DIRECCIÓN", value: "XXXXXXXXXXXXXXXXXXXX" },
+            { label: "BCP", value: "2159492904101428" },
+            { label: "CCI", value: "00221519492904101408" },
+            { label: "YAPE", value: "+51 993727469" },
+            // { label: "DIRECCIÓN", value: "Cayma - Perú" },
           ]}
         />
         </Reveal>
@@ -182,7 +183,7 @@ export default function Home() {
         {/* Gift suggestion + Playlist card */}
         <Reveal>
           <GiftAndPlaylistCard
-          backgroundSrc="/bg-roses-2.png"
+          backgroundSrc="/bg-terr-10.png"
           titleGift="Sugerencia de regalo"
           giftIconSrc="/icon/GIFT_2.png"
           giftMessage="¡Que nos acompañen es lo más importante! Y si está en tu disposición realizar una muestra de cariño estaremos muy agradecidos."
@@ -198,7 +199,7 @@ export default function Home() {
         {/* Confirm attendance card */}
         <Reveal>
           <ConfirmAttendanceCard
-          backgroundSrc="/bg-roses-2.png"
+          backgroundSrc="/bg-terr-8.png"
           title="Confirma tu asistencia"
           message="Tu presencia hará que este día sea aún más especial para nosotros. Por favor, confirma tu asistencia y acompáñanos en este momento tan importante."
           deadline="20 de Setiembre"

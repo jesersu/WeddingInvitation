@@ -29,7 +29,7 @@ export default function ItineraryCard({
       {/* Background */}
       <div className="relative h-[720px] sm:h-[800px] md:h-[880px]">
         <Image src={backgroundSrc} alt="Roses background" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-white/70" />
+        {/* <div className="absolute inset-0 bg-white/70" /> */}
       </div>
 
       {/* Centered rounded card */}

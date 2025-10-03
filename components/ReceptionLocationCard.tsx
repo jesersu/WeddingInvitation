@@ -25,7 +25,7 @@ export default function ReceptionLocationCard({
       {/* Background */}
       <div className="relative h-[420px] sm:h-[480px] md:h-[520px]">
         <Image src={backgroundSrc} alt="Roses background" fill priority className="object-cover" />
-        <div className="absolute inset-0 bg-white/70" />
+        {/* <div className="absolute inset-0 bg-white/70" /> */}
       </div>
 
       {/* Centered floating card */}
